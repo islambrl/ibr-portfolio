@@ -36,23 +36,7 @@
 
    
    
-    if(isset($_POST["send"])){
-        require_once 'mail.php';
-        $mail->setFrom($_SESSION['email'], $_SESSION['name']);
-        $mail->addAddress('islamberoual0519@gmail.com');
-        $mail->Subject = $_POST['subject'] ;
-        $mail-> Body = '<h2>Email:</h2>'. $_POST['email'].'<br>'.'<h2>name:</h2>'.$_POST['fullname'].'<br>'.'<h2>phone number:</h2>'.$_POST['phone'].'<br>'.'<h2>subject:</h2>'.'<br>'. $_POST['message'] ; 
-       
-        if( $mail->send()){
-            echo "<h3  >we get your message and we'll reply  soon </h3>";
-        }else{
-            echo "<h2 style=' color:red;position: absolute;bottom: 10%; right:37% ;'  >there is a problem try againe </h2>";
-        }
-     }
-   
-
-   
-  ?>
+ 
   
     <script>
     var home = document.getElementById("contact");
